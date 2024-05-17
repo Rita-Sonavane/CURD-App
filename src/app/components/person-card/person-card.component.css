@@ -1,0 +1,44 @@
+.card {
+    padding: 1.5em 0.5em 0.5em;
+    text-align: center;
+    border-radius: 2em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #302f32;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+.card>.pic>img {
+    width: 30%;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card>.description {
+    padding: 30px;
+    line-height: 24px;
+}
+
+.card>.description>.person-name>h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e8e4e7;
+}
+
+.card>.description>.person-name>span {
+    font-size: .85rem;
+    font-weight: 300;
+    color: #e8e4e7;
+}
+
+
+@media only screen and (max-width: 990px) {
+    .card {
+        margin-bottom: 25px;
+    }
+}

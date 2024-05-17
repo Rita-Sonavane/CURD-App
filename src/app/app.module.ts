@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { PersonFormComponent } from './components/person-form/person-form.component';
 import { PersonService } from './services/person.service';
 import { FormsModule } from '@angular/forms';
+import { PersonListComponent } from './components/person-list/person-list.component';
+import { PersonCardComponent } from './components/person-card/person-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonFormComponent
+    PersonFormComponent,
+    PersonListComponent,
+    PersonCardComponent
   ],
   imports: [
     BrowserModule,

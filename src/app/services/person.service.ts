@@ -9,80 +9,80 @@ export class PersonService {
   private persons: Person[] = [
     {
       id: 1,
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'John',
+      email: 'john@gmail.com',
       dob: '1990-05-15',
       avatar: 'https://via.placeholder.com/150',
       country: 'India'
     },
     {
       id: 2,
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'Joshua',
+      email: 'Joshua@gmail.com',
       dob: '1990-05-15',
       avatar: 'https://via.placeholder.com/150',
       country: 'USA'
     },
     {
       id: 3,
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'Erik Doe',
+      email: 'Erik@gmail.com',
       dob: '1990-05-15',
       avatar: 'https://via.placeholder.com/150',
       country: 'USA'
     },
     {
       id: 4,
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'Melany Doe',
+      email: 'Melany@gmail.com',
       dob: '1990-05-15',
       avatar: 'https://via.placeholder.com/150',
       country: 'USA'
     },
     {
       id: 5,
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'Jimmy Doe',
+      email: 'Jimmy@gmail.com',
       dob: '1990-05-15',
       avatar: 'https://via.placeholder.com/150',
       country: 'USA'
     },
     {
       id: 6,
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'Tara Doe',
+      email: 'Tara@gmail.com',
       dob: '1990-05-15',
       avatar: 'https://via.placeholder.com/150',
       country: 'USA'
     },
     {
       id: 7,
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'Esteban Doe',
+      email: 'Esteban@gmail.com',
       dob: '1990-05-15',
       avatar: 'https://via.placeholder.com/150',
       country: 'USA'
     },
     {
       id: 8,
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'Henry Doe',
+      email: 'Henry@gmail.com',
       dob: '1990-05-15',
       avatar: 'https://via.placeholder.com/150',
       country: 'USA'
     },
     {
       id: 9,
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'Mary Doe',
+      email: 'Mary@gmail.com',
       dob: '1990-05-15',
       avatar: 'https://via.placeholder.com/150',
       country: 'USA'
     },
     {
       id: 10,
-      name: 'John Doe',
-      email: 'john@example.com',
+      name: 'Carmen Doe',
+      email: 'Carmen@gmail.com',
       dob: '1990-05-15',
       avatar: 'https://via.placeholder.com/150',
       country: 'USA'
