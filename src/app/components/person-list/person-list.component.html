@@ -1,16 +1,22 @@
 <div class="container">
-    <div class="row">
+    <div class="row main-unit">
         <!-- title -->
         <div class="col-md-12 my-2">
-            <div class="title">
-                <h3>Users List</h3>
+            <div class="row">
+                <div class="title">
+                    <h3>Users List</h3>
+                </div>
             </div>
         </div>
-       
+
         <!-- card component -->
         <div class="col-md-12 my-2">
-            <app-person-card></app-person-card>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-5" *ngFor="let person of persons">
+                    <app-person-card [person]="person"></app-person-card>
+                </div>
+            </div>
         </div>
-    
+
     </div>
 </div>

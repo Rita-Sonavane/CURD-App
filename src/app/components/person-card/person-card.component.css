@@ -1,9 +1,10 @@
 .card {
     padding: 1.5em 0.5em 0.5em;
     text-align: center;
-    border-radius: 2em;
+    border-radius: 6px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     background-color: #302f32;
+    border: 1px solid #545454;
 }
 
 .card-title {
@@ -34,6 +35,11 @@
     font-size: .85rem;
     font-weight: 300;
     color: #e8e4e7;
+}
+
+.card:hover{
+    border: 1px solid #3aad8e;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 
