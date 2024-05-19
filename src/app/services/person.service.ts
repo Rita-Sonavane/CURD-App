@@ -130,8 +130,8 @@ export class PersonService {
   updatePerson(updatedPerson: any) {
     const index = this.persons.findIndex(person => person.id === updatedPerson.id);
     if (index !== -1) {
-      const randomAvatarIndex = Math.floor(Math.random() * this.avatars.length);
-      updatedPerson.avatar = this.avatars[randomAvatarIndex];
+      // const randomAvatarIndex = Math.floor(Math.random() * this.avatars.length);
+      // updatedPerson.avatar = this.avatars[randomAvatarIndex];
       this.persons[index] = updatedPerson;
     }
   }

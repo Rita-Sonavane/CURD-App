@@ -95,7 +95,8 @@ export class PersonFormComponent implements OnInit {
   }
 
   updatePerson(form: NgForm) {
-    const personWithId = { ...form.value, id: this.person.id }; 
+    const personWithId = { ...form.value, id: this.person.id, avatar : this.person.avatar }; 
+    console.log("update call",personWithId);
     setTimeout(() => {
       this.personService.updatePerson(personWithId);
       console.log("updatePerson called", form.value, this.person.id);

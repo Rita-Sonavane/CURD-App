@@ -40,6 +40,4 @@ export class PersonCardComponent implements OnInit {
   }
 
 
-
-
 }
