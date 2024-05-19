@@ -1,15 +1,20 @@
-.main-unit {
+.container {
+    height: 100%;
     align-items: center;
     justify-content: center;
 }
 
-.help-text{
+.help-text {
     color: red;
 }
 
 .form-layout {
     max-width: 740px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .form-layout .form-outer {
@@ -52,8 +57,8 @@
     height: 38px;
     line-height: 1.1;
     font-size: .95rem;
-    background-color: #3aad8e;
-    border: 1px solid #179977;
+    background-color: #179977;
+    border: 1px solid #3aad8e;
     border-radius: 6px;
     color: #e8e4e7;
     transition: all .3s;
@@ -124,7 +129,7 @@ span {
     text-align: inherit;
 }
 
-.control.has-icon .input {
+.control.has-icon .input{
     height: 38px;
     width: 100%;
     padding-inline-start: 38px;
@@ -133,6 +138,7 @@ span {
     border: 1px solid #545454;
     color: #e8e4e7;
 }
+
 
 .dob-country {
     display: flex;
@@ -144,6 +150,16 @@ span {
     transition: all .3s;
     background-color: #302f32;
     border: 1px solid #545454;
+    color: #e8e4e7;
+}
+
+select{
+    height: 38px;
+    padding-inline-start: 38px;
+    transition: all .3s;
+    background-color: #302f32;
+    border: 1px solid #545454;
+    color: #e8e4e7;
 }
 
 .control.has-icon .form-icon {
@@ -158,22 +174,69 @@ span {
     align-items: center;
 }
 
-/* .control.has-icon .form-icon {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    background-color: #302f32;
-    height: 38px;
-    width: 38px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
+.button.v-button:hover {
+    background-color: #3aad8e;
+    border-color: transparent;
     color: #e8e4e7;
-    transition: all .3s;
-    text-decoration: none;
-} */
+}
 
-@media screen and (min-width: 769px), print {
-    .column.is-6, .column.is-6-tablet {
+
+input[type="date"] {
+    display: block;
+    position: relative;
+    padding: 1rem 3.5rem 1rem 0.75rem;
+    color:  #e8e4e7; 
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 20 22'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23e8e4e7' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' transform='translate(1 1)'%3E%3Crect width='18' height='18' y='2' rx='2'/%3E%3Cpath d='M13 0L13 4M5 0L5 4M0 8L18 8'/%3E%3C/g%3E%3C/svg%3E") right 1rem center no-repeat;
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #3aad8e;
+    box-shadow: 0 0 0 0.25rem rgba(0, 120, 250, 0.1);
+}
+
+select:focus {
+    outline: none;
+    border: 1px solid #3aad8e;
+    box-shadow: 0 0 0 0.25rem rgba(0, 120, 250, 0.1);
+}
+
+
+::-webkit-datetime-edit-month-field:hover,
+::-webkit-datetime-edit-day-field:hover,
+::-webkit-datetime-edit-year-field:hover {
+  background:rgba(0, 120, 250, 0.1);
+}
+::-webkit-datetime-edit-text {
+  opacity:0;
+}
+::-webkit-clear-button,
+::-webkit-inner-spin-button {
+  display:none;
+}
+::-webkit-calendar-picker-indicator {
+  position:absolute;
+  width:2.5rem;
+  height:100%;
+  top:0;
+  right:0;
+  bottom:0;
+  
+  opacity:0;
+  cursor:pointer;
+  
+  color:rgba(0, 120, 250, 1);
+  background:rgba(0, 120, 250, 1);
+ 
+}
+
+
+@media screen and (min-width: 769px),
+print {
+
+    .column.is-6,
+    .column.is-6-tablet {
         flex: none;
         width: 50%;
     }

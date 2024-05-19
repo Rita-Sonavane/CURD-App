@@ -127,11 +127,19 @@ export class PersonService {
   }
 
   updatePerson(updatedPerson: Person,personID:any) {
-    const index = this.persons.findIndex(person => person.id === personID);
+    const index = this.persons.findIndex(person => person.id == personID);
     if (index !== -1) {
       const randomAvatarIndex = Math.floor(Math.random() * this.avatars.length);
       updatedPerson.avatar = this.avatars[randomAvatarIndex];
       this.persons[index] = updatedPerson;
+    }
+  }
+
+
+  deletePerson(id: number){
+    const index = this.persons.findIndex(person => person.id == id);
+    if (index !== -1) {
+      this.persons.splice(index, 1);
     }
   }
 

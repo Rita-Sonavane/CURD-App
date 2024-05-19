@@ -1,15 +1,19 @@
 <div class="container">
-    <div class="card" (click)="navigateToEdit(person.id)">
+    <div class="card">
         <div class="pic">
             <img class="avtar" src="{{person.avatar}}" alt="{{person.name}}" title="{{ person.name }}">
-            <img class="badges" [src]="person.country | countryFlag" alt="{{ person.country }} flag" title="{{ person.country }}">
+            <img class="badges" [src]="person.country | countryFlag" alt="{{ person.country }} flag"
+                title="{{ person.country }}">
         </div>
-       
+
         <div class="description">
             <div class="person-name">
-                <h4 class="mt-0">{{person.name}}</h4>
+                <h4 class="mt-0" title="Edit" (click)="navigateToEdit(person.id)">{{person.name}}</h4>
                 <span>{{person.email}}</span>
                 <p class="mb-0 mt-0">Age: {{ person.dob | age }}</p>
+                <div class="button-wrap has-text-centered">
+                    <div (click)="deletePerson(person.id)"><a class="dark-inverted-hover" title="Delete" >Delete</a></div>
+                </div>
             </div>
         </div>
     </div>

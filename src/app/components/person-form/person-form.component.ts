@@ -59,8 +59,9 @@ export class PersonFormComponent implements OnInit {
     }, 0);
   }
 
-  setFormValues(): void {
+  setFormValues(): void {    
     if (this.personForm) {
+     
       this.personForm.setValue({
         name: this.person.name,
         email: this.person.email,
@@ -73,6 +74,11 @@ export class PersonFormComponent implements OnInit {
 
   onSubmit(personForm: NgForm) {
     console.log("this.isEditMode", this.isEditMode, personForm.value);
+    if (personForm.invalid) {
+      alert('Please fill out all required fields.');
+      return;
+    }
+
     if (this.isEditMode) {
       this.updatePerson(personForm);
     } else {

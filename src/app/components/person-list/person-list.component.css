@@ -75,19 +75,18 @@ input {
     /* line-height: 1.1; */
     font-size: .80rem;
     transition: all .3s;
-    background-color: #3aad8e;
-    border: 1px solid #179977;
+    background-color: #179977;
+    border: 1px solid #3aad8e;
     color: #e8e4e7;
     border-radius: 6px;
     font: "Roboto Flex Variable", sans-serif;
 }
 
-.button.v-button:hover{
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color:#302f32;
-    border: 1px solid #302f32;
+.button.v-button:hover {
+    background-color: #3aad8e;
+    border-color: transparent;
+    color: #e8e4e7;
 }
-
 /* title */
 
 .title h3 {
@@ -97,7 +96,16 @@ input {
     line-height: 1.125;
 }
 
-
+input:focus {
+    outline: none;
+    border: 1px solid #3aad8e;
+    box-shadow: 0 0 0 0.25rem rgba(0, 120, 250, 0.1);
+}
+/* .form-icon:hover {
+    outline: none;
+    border: 1px solid #3aad8e;
+    box-shadow: 0 0 0 0.25rem rgba(0, 120, 250, 0.1);
+} */
 @media only screen and (max-width: 990px) {
     .button.v-button {
         display: flex;

@@ -13,6 +13,10 @@
     font-size: 1.5em;
 }
 
+h4{
+    cursor: pointer;
+}
+
 .card>.pic {
     margin: 0 auto 4px;
     position: relative;
@@ -72,6 +76,28 @@
 .card:hover {
     border: 1px solid #3aad8e;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ .button-wrap {
+    margin: 20px 0 0;
+    text-align: center;
+    color: #e8e4e7;
+}
+
+.button-wrap >div .dark-inverted-hover {
+    opacity: 0;
+    pointer-events: none;
+    color: rgb(238, 60, 116);
+    font-weight: 500;
+    font-size: .9rem;
+    transition: opacity .3s, color .3s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card:hover > div .dark-inverted-hover{
+    opacity: 5;
+    cursor: pointer;
 }
 
 

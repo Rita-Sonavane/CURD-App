@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12 main-unit">
+    <div class="col-md-12 main-unit mt-5">
 
       <form #personForm="ngForm" (ngSubmit)="onSubmit(personForm)" class="form-layout mt-5">
         <div class="form-outer">
           <div class="form-header stuck-header">
             <div class="form-header-inner">
               <div class="left">
-                <h3>{{ isEditMode ? 'Edit Information' : 'Add Person' }} </h3>
+                <h3>{{ isEditMode ? 'Edit Information' : 'Add Information' }} </h3>
               </div>
               <div class="right">
                 <div class="buttons">
@@ -20,18 +20,14 @@
           </div>
           <div class="form-body">
             <div class="form-fieldset">
-              <div class="fieldset-heading">
-                <h4>Personal Info</h4>
-                <p>This helps us to know you</p>
-              </div>
               <div class="columns is-multiline">
                 <div class="column is-12">
-                  <div class="field"><label class="label">First Name</label>
+                  <div class="field"><label class="label">Name</label>
                     <div class="control has-icon">
                       <i class="fa fa-user-o form-icon"></i>
                       <input class="input v-input" type="text" placeholder="" name="name" ngModel required
                         #name="ngModel">
-                      <div class="help-text" *ngIf="personForm.touched && !personForm.valid">
+                      <div class="help-text" *ngIf="name.invalid && name.touched">
                         <div *ngIf="name.errors?.['required']">Name is required</div>
                       </div>
                     </div>
@@ -39,12 +35,12 @@
                 </div>
 
                 <div class="column is-12">
-                  <div class="field"><label class="label">Email Address</label>
+                  <div class="field"><label class="label">Email</label>
                     <div data-v-9a5a2f3f="" class="control has-icon">
                       <i class="fa fa-envelope-o form-icon"></i>
                       <input class="input v-input" type="email" placeholder="abc@example.com" name="email" ngModel email
                         required #email="ngModel">
-                      <div class="help-text" *ngIf="personForm.touched && !personForm.valid">
+                      <div class="help-text" *ngIf="email.invalid && email.touched">
                         <div *ngIf="email.errors?.['required']">Email is required</div>
                         <div *ngIf="email.errors?.['email']">Email is Invalid</div>
                       </div>
@@ -57,15 +53,16 @@
                     <div class="field"><label class="label">Country</label>
                       <div data-v-9a5a2f3f="" class="control has-icon">
                         <i class="fa fa-flag-o form-icon"></i>
-                        <select class="select input v-input" name="country" ngModel [(ngModel)]="selectedCountry" required #country="ngModel">
+                        <select class="select input v-input" name="country" placeholder="India" ngModel  [(ngModel)]="selectedCountry" required #country="ngModel">
                           <option value="India">India</option>
-                          <option value="Canada">USA</option>
+                          <option value="Canada">Canada</option>
+                          <option value="USA">USA</option>
                           <option value="Germany">Germany</option>
                           <option value="United Kingdom">United Kingdom</option>
                           <option value="France">France</option>
                         </select>
-                        <div class="help-text" *ngIf="personForm.touched && !personForm.valid">
-                          <div *ngIf="country.errors?.['required']">Username is required</div>
+                        <div class="help-text" *ngIf="country.invalid && country.touched">
+                          <div *ngIf="country.errors?.['required']">Country is required</div>
                         </div>
                       </div>
                     </div>
@@ -74,10 +71,13 @@
                   &nbsp;
 
                   <div class="column is-6 ">
-                    <div class="field"><label class="label">Prefered Date</label>
+                    <div class="field"><label class="label">Date of Brith</label>
                       <div data-v-9a5a2f3f="" class="control has-icon">
-                        <i class="fa fa-calendar-o form-icon"></i>
-                        <input class="input v-input" type="text" placeholder="1990-05-15" name="dob" ngModel>
+                        <!-- <i class="fa fa-calendar-o form-icon"></i> -->
+                        <input class="input v-input" type="date"  value="2017-01-01" max="2024-05-01"  name="dob" ngModel required #dob="ngModel">
+                        <div class="help-text" *ngIf="dob.invalid && dob.touched">
+                          <div *ngIf="dob.errors?.['required']">Date of Brith is required</div>
+                        </div>
                       </div>
                     </div>
                   </div>
