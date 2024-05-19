@@ -6,7 +6,7 @@ import { PersonFormComponent } from './components/person-form/person-form.compon
 const routes: Routes = [
   { path: '', component: PersonListComponent },
   { path: 'add', component: PersonFormComponent },
-  // { path: 'edit/:id', component: PersonFormComponent },
+  { path: 'edit/:id', component: PersonFormComponent },
   { path: '**', redirectTo: '' }
 ];
 

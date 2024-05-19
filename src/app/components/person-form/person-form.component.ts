@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Person } from 'src/app/model/person';
 import { PersonService } from 'src/app/services/person.service';
 
@@ -17,17 +19,78 @@ export class PersonFormComponent implements OnInit {
     avatar: '',
     country: ''
   };
-  
-  constructor( private personService: PersonService,){}
 
-  persons: Person[] = [];
+  @ViewChild('personForm') personForm: NgForm | ElementRef | any;
+
+  isEditMode: boolean = false;
+
+  constructor(
+    private personService: PersonService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
 
   ngOnInit(): void {
-    this.persons = this.personService.getPersons();
+    this.route.paramMap.subscribe(params => {
+      const personId: any = params.get('id');
+      if (personId) {
+        this.isEditMode = true;
+        console.log("from ngOnInit  this.isEditMode", this.isEditMode);
+        const existingPerson = this.personService.getPersonById(personId);
+        if (!existingPerson) {
+          this.router.navigate(['/']);
+        } else {
+          this.person = existingPerson;
+        }
+      } else {
+        this.isEditMode = false;
+      }
+    });
   }
 
-  onSubmit(){
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      if (this.isEditMode) {
+        this.setFormValues();
+      }
+    }, 0);
+  }
 
+  setFormValues(): void {
+    if (this.personForm) {
+      this.personForm.setValue({
+        name: this.person.name,
+        email: this.person.email,
+        dob: this.person.dob,
+        // avatar: this.person.avatar,
+        country: this.person.country
+      });
+    }
+  }
+
+  onSubmit(personForm: NgForm) {
+    console.log("this.isEditMode",this.isEditMode,personForm.value);
+    if (this.isEditMode) {
+      this.updatePerson(personForm);
+    } else {
+      this.addPerson(personForm);
+    }
+  }
+
+  addPerson(form: NgForm) {
+    console.log("addPerson called", form.value);
+    const id = new Date().getTime();
+    const personWithId = { ...form.value, id: id };
+    this.personService.addPerson(personWithId);
+    this.router.navigate(['/']);
+  }
+
+  updatePerson(form: NgForm) {
+    setTimeout(() => {
+    this.personService.updatePerson(form.value,this.person.id);
+    console.log("updatePerson called",  form.value,this.person.id);
+    this.router.navigate(['/']);
+    },0)
   }
 }

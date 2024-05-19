@@ -1,15 +1,106 @@
-.main-unit{
+.main-unit {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* search */
+.span {
+    box-sizing: border-box;
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: inherit;
+    color: #e8e4e7;
+    /* background-color: #343337; */
+    
+}
+.sarch{
+    box-sizing: border-box;
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: inherit;
+    display: flex;
+}
+
+
+input {
+    height: 38px;
+    padding-inline-start: 38px;
+    transition: all .3s;
+    color: #e8e4e7;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #302f32;
+    border:none;
+    text-decoration: none;
+}
+
+
+.form-icon {
+    color: #e8e4e7;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #302f32;
+    /* border: 1px solid #545454; */
+    height: 38px;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #e8e4e7;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+
+/* Add Button */
+
+.buttons{
+    margin-inline-start: auto;
+    margin-bottom: 0;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    cursor: pointer;
+    justify-content: center;
+}
+
+
+
+.button.v-button {
+    padding: 8px 22px;
+    height: 38px;
+    /* line-height: 1.1; */
+    font-size: .80rem;
+    transition: all .3s;
+    background-color: #3aad8e;
+    border: 1px solid #179977;
+    color: #e8e4e7;
+    border-radius: 6px;
+    font: "Roboto Flex Variable", sans-serif;
+}
+
+.button.v-button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color:#302f32;
+    border: 1px solid #302f32;
+}
 
 /* title */
 
-.title h3{
+.title h3 {
     font-size: 2rem;
     color: #e8e4e7;
     font-weight: 600;
     line-height: 1.125;
+}
+
+
+@media only screen and (max-width: 990px) {
+    .button.v-button {
+        display: flex;
+        font-size: .55rem;
+    }
 }

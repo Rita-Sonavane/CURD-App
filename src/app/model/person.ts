@@ -1,9 +1,9 @@
 
 export interface Person {
-    id: number;
+    id?: number;
     name: string;
     email: string;
     dob: string;
-    avatar: string;
+    avatar?: any;
     country: string;
 }

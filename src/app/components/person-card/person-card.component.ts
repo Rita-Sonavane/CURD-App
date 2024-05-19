@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Person } from 'src/app/model/person';
 import { PersonService } from 'src/app/services/person.service';
 
@@ -13,9 +14,14 @@ export class PersonCardComponent implements OnInit{
  @Input()
   person: Person | any;
 
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
    
+  }
+
+  navigateToEdit(personId: number): void {
+    this.router.navigate(['/edit', personId]);
   }
   
 }

@@ -1,18 +1,32 @@
 <div class="container">
     <div class="row main-unit">
         <!-- title -->
-        <div class="col-md-12 my-2">
+        <div class="col-md-12 ">
             <div class="row">
-                <div class="title">
-                    <h3>Users List</h3>
+                <div class="title mt-4">
+                    <h3 class="mx-2">Users List</h3>
                 </div>
             </div>
+        </div>
+
+        <!-- search  -->
+        <div class="col-md-12  sarch mb-5 mt-4">
+            <i class="fa fa-search form-icon"></i>
+            <input type="text" class="input" [(ngModel)]="searchTerm" placeholder="Search by name...">
+
+            <!-- Add Button -->
+            <div class="buttons">
+                <button type="button" aria-hidden="false"
+                    class="button button v-button is-raised is-primary" (click)="navigateToAddPerson()"><i aria-hidden="true"
+                                class="fa fa-plus"></i>&nbsp;&nbsp;<span>Add User</span></button>
+            </div>
+
         </div>
 
         <!-- card component -->
         <div class="col-md-12 my-2">
             <div class="row">
-                <div class="col-md-3 col-sm-6 mb-5" *ngFor="let person of persons">
+                <div class="col-md-3 col-sm-6 mb-5" *ngFor="let person of persons | filter:searchTerm">
                     <app-person-card [person]="person"></app-person-card>
                 </div>
             </div>

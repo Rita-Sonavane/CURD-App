@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Person } from 'src/app/model/person';
 import { PersonService } from 'src/app/services/person.service';
 
@@ -9,13 +10,18 @@ import { PersonService } from 'src/app/services/person.service';
 })
 export class PersonListComponent implements OnInit{
 
-  constructor( private personService: PersonService,){}
+  constructor( private personService: PersonService,private router: Router){}
 
   persons: Person[] = [];
+  searchTerm: string = '';
 
 
   ngOnInit(): void {
     this.persons = this.personService.getPersons();
+  }
+
+  navigateToAddPerson(): void {
+    this.router.navigate(['/add']);
   }
 
 }

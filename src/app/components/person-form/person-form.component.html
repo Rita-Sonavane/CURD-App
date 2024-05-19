@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 main-unit">
+
+      <form #personForm="ngForm" (ngSubmit)="onSubmit(personForm)" class="form-layout mt-5">
+        <div class="form-outer">
+          <div class="form-header stuck-header">
+            <div class="form-header-inner">
+              <div class="left">
+                <h3>{{ isEditMode ? 'Edit Information' : 'Add Person' }} </h3>
+              </div>
+              <div class="right">
+                <div class="buttons">
+                  <button type="submit" aria-hidden="false" class="button button v-button is-raised is-primary"><span>
+                    {{ isEditMode ? 'Update' : 'Add' }}
+                    </span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-body">
+            <div class="form-fieldset">
+              <div class="fieldset-heading">
+                <h4>Personal Info</h4>
+                <p>This helps us to know you</p>
+              </div>
+              <div class="columns is-multiline">
+                <div class="column is-12">
+                  <div class="field"><label class="label">First Name</label>
+                    <div data-v-9a5a2f3f="" class="control has-icon">
+                      <i class="fa fa-user-o form-icon"></i>
+                      <input class="input v-input"  type="text" placeholder=""  name="name" ngModel>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-12">
+                  <div class="field"><label class="label">Email Address</label>
+                    <div data-v-9a5a2f3f="" class="control has-icon">
+                      <i class="fa fa-envelope-o form-icon"></i>
+                      <input class="input v-input" type="email" placeholder="" name="email" ngModel>
+                    </div>
+                  </div>
+                </div>
+                <div class="dob-country">
+
+                  <div class="column is-6  ">
+                    <div class="field"><label class="label">Country</label>
+                      <div data-v-9a5a2f3f="" class="control has-icon">
+                        <i class="fa fa-flag-o form-icon"></i>
+                        <input class="input v-input" placeholder="" type="text" name="country" ngModel>                
+                      </div>
+                    </div>
+                  </div>
+
+                  &nbsp;
+
+                  <div class="column is-6 ">
+                    <div class="field"><label class="label">Prefered Date</label>
+                      <div data-v-9a5a2f3f="" class="control has-icon">
+                        <i class="fa fa-calendar-o form-icon"></i>
+                        <input class="input v-input" type="text" placeholder="1990-05-15" name="dob" ngModel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

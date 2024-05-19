@@ -1,35 +1,17 @@
 <div class="container">
-    <div class="card">
+    <div class="card" (click)="navigateToEdit(person.id)">
         <div class="pic">
-            <img src="{{person.avatar}}" alt="our-team">
+            <img class="avtar" src="{{person.avatar}}" alt="{{person.name}}" title="{{ person.name }}">
+            <img class="badges" [src]="person.country | countryFlag" alt="{{ person.country }} flag" title="{{ person.country }}">
         </div>
+       
         <div class="description">
             <div class="person-name">
-                <h4>{{person.name}}</h4>
+                <h4 class="mt-0">{{person.name}}</h4>
                 <span>{{person.email}}</span>
+                <p class="mb-0 mt-0">Age: {{ person.dob | age }}</p>
             </div>
         </div>
     </div>
 </div>
 
-
-<!-- 
-<div class="container">
-    <div class="row">
-       <ng-container>
-        <div class="col-md-3 col-sm-6 mb-5" *ngFor="let person of persons">
-            <div class="card">
-                <div class="pic">
-                    <img src="{{person.avatar}}" alt="our-team">
-                </div>
-                <div class="description">
-                    <div class="person-name">
-                        <h4>{{person.name}}</h4>
-                        <span>{{person.email}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-       </ng-container>
-    </div>
-</div> -->
