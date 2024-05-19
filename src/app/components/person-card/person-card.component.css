@@ -57,7 +57,7 @@ h4{
 }
 
 .card>.description {
-    padding: 20px;
+    padding: 10px;
     line-height: 24px;
 }
 
@@ -79,9 +79,10 @@ h4{
 }
 
  .button-wrap {
-    margin: 20px 0 0;
+    margin: 10px 0 0;
     text-align: center;
     color: #e8e4e7;
+    cursor: pointer;
 }
 
 .button-wrap >div .dark-inverted-hover {

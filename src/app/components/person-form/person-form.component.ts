@@ -95,8 +95,9 @@ export class PersonFormComponent implements OnInit {
   }
 
   updatePerson(form: NgForm) {
+    const personWithId = { ...form.value, id: this.person.id }; 
     setTimeout(() => {
-      this.personService.updatePerson(form.value, this.person.id);
+      this.personService.updatePerson(personWithId);
       console.log("updatePerson called", form.value, this.person.id);
       this.router.navigate(['/']);
     }, 0)

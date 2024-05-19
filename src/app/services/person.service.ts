@@ -9,8 +9,8 @@ export class PersonService {
    persons: Person[] = [
     {
       id: 1,
-      name: 'John D.',
-      email: 'john@gmail.com',
+      name: 'Mithali Raj',
+      email: 'mithali@gmail.com',
       dob: '1999-12-04',
       avatar: 'assets/svg/1.svg',
       country: 'India'
@@ -57,8 +57,8 @@ export class PersonService {
     },
     {
       id: 7,
-      name: 'Esteban E.',
-      email: 'Esteban@gmail.com',
+      name: 'Shubham W.',
+      email: 'shubham@gmail.com',
       dob: '1990-05-15',
       avatar: 'assets/svg/3.svg',
       country: 'India'
@@ -81,8 +81,8 @@ export class PersonService {
     },
     {
       id: 10,
-      name: 'Carmen M.',
-      email: 'Carmen@gmail.com',
+      name: 'Akshay B.',
+      email: 'akshay@gmail.com',
       dob: '1990-05-15',
       avatar: 'assets/svg/12.svg',
       country: 'India'
@@ -126,8 +126,9 @@ export class PersonService {
     this.persons.push(person);
   }
 
-  updatePerson(updatedPerson: Person,personID:any) {
-    const index = this.persons.findIndex(person => person.id == personID);
+  
+  updatePerson(updatedPerson: any) {
+    const index = this.persons.findIndex(person => person.id === updatedPerson.id);
     if (index !== -1) {
       const randomAvatarIndex = Math.floor(Math.random() * this.avatars.length);
       updatedPerson.avatar = this.avatars[randomAvatarIndex];

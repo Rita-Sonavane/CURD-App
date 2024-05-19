@@ -10,11 +10,8 @@ import { PersonService } from 'src/app/services/person.service';
 })
 export class PersonCardComponent implements OnInit {
 
-
   @Input()
   person: Person | any;
-
-
 
   constructor(private router: Router, private personService: PersonService) { }
 
