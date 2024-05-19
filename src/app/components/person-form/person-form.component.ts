@@ -24,6 +24,8 @@ export class PersonFormComponent implements OnInit {
 
   isEditMode: boolean = false;
 
+  selectedCountry: string = "India";
+
   constructor(
     private personService: PersonService,
     private route: ActivatedRoute,
@@ -70,7 +72,7 @@ export class PersonFormComponent implements OnInit {
   }
 
   onSubmit(personForm: NgForm) {
-    console.log("this.isEditMode",this.isEditMode,personForm.value);
+    console.log("this.isEditMode", this.isEditMode, personForm.value);
     if (this.isEditMode) {
       this.updatePerson(personForm);
     } else {
@@ -88,9 +90,9 @@ export class PersonFormComponent implements OnInit {
 
   updatePerson(form: NgForm) {
     setTimeout(() => {
-    this.personService.updatePerson(form.value,this.person.id);
-    console.log("updatePerson called",  form.value,this.person.id);
-    this.router.navigate(['/']);
-    },0)
+      this.personService.updatePerson(form.value, this.person.id);
+      console.log("updatePerson called", form.value, this.person.id);
+      this.router.navigate(['/']);
+    }, 0)
   }
 }

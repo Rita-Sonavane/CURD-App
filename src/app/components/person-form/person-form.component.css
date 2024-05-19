@@ -3,6 +3,10 @@
     justify-content: center;
 }
 
+.help-text{
+    color: red;
+}
+
 .form-layout {
     max-width: 740px;
     margin: 0 auto;

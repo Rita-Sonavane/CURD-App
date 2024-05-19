@@ -20,7 +20,8 @@ export class PersonCardComponent implements OnInit{
    
   }
 
-  navigateToEdit(personId: number): void {
+  navigateToEdit(personId: number) {
+    console.log(personId);    
     this.router.navigate(['/edit', personId]);
   }
   

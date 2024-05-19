@@ -16,7 +16,7 @@ export class CountryFlagPipe implements PipeTransform {
       'Canada': 'ca',
       'United Kingdom': 'gb',
       'Germany': 'de',
-      'France': 'fr',
+      'France': 'fr', 
       'India': 'in',
     };
 
