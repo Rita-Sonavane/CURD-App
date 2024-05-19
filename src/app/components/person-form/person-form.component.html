@@ -11,7 +11,11 @@
               </div>
               <div class="right">
                 <div class="buttons">
-                  <button type="submit" aria-hidden="false" class="button button v-button is-raised is-primary"><span>
+                  <button type="button" aria-hidden="false" class="button button v-button_cancel is-raised is-primary" (click)="cancel()"><span>
+                   Cancel
+                  </span></button>
+
+                  <button type="submit" aria-hidden="false" class="button button v-button is-raised is-primary mx-2"><span>
                       {{ isEditMode ? 'Update' : 'Add' }}
                     </span></button>
                 </div>

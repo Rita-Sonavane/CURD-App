@@ -102,4 +102,8 @@ export class PersonFormComponent implements OnInit {
       this.router.navigate(['/']);
     }, 0)
   }
+
+  cancel(){
+    this.router.navigate(['/']);
+  }
 }
