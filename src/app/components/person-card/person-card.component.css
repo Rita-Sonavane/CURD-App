@@ -6,6 +6,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     background-color: #302f32;
     border: 1px solid #545454;
+    cursor: default;
 }
 
 .card-title {
@@ -13,9 +14,7 @@
     font-size: 1.5em;
 }
 
-h4{
-    cursor: pointer;
-}
+
 
 .card>.pic {
     margin: 0 auto 4px;
@@ -65,13 +64,13 @@ h4{
     font-size: 1.1rem;
     font-weight: 600;
     color: #e8e4e7;
+    cursor: pointer;
 }
 
 .card>.description>.person-name>span,p {
     font-size: .85rem;
     font-weight: 300;
     color: #e8e4e7;
-    cursor: default;
 }
 
 .card:hover {
