@@ -28,7 +28,6 @@ export class PersonCardComponent implements OnInit {
   }
 
   deletePerson(personId: number) {
-    console.log(personId,"delete called");
     if(window.confirm('Are you sure you want to delete this person?')) {
       this.personService.deletePerson(personId);
       this.personService.getPersons(); 
